@@ -12,7 +12,7 @@ export const trackWithLoggly = async () => {
   const version = __APP_VERSION__;
 
   // @ts-ignore
-  if (import.meta) {
+  if (!import.meta.env.PROD) {
     console.log(url, version);
     return;
   }
