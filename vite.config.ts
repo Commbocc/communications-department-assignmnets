@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -9,8 +9,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
-
   return {
     base: "/communications-department-assignmnets",
 
@@ -26,7 +24,7 @@ export default defineConfig(({ mode }) => {
     },
 
     define: {
-      "process.env": JSON.stringify(process.env),
+      "process.env.NODE_ENV": JSON.stringify(mode),
       __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     },
 

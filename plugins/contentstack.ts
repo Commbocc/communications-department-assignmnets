@@ -1,5 +1,5 @@
 import { $fetch } from "ofetch";
-import type { Plugin } from "vite";
+import { loadEnv, type Plugin } from "vite";
 import type {
   CommunicationsStaff,
   ContentTypeResponse,
@@ -38,7 +38,9 @@ export const ContentstackDataPlugin = (): Plugin => {
   return {
     name: "contentstack-data-plugin",
 
-    async config(_config, _env) {
+    async config(_config, env) {
+      process.env = { ...process.env, ...loadEnv(env.mode, process.cwd()) };
+
       const mainClient = createContentstackRestClient({
         api_key: process.env.VITE_CONTENTSTACK_MAIN_API_KEY ?? "",
         access_token: process.env.VITE_CONTENTSTACK_MAIN_ACCESS_TOKEN ?? "",
