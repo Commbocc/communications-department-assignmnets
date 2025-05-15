@@ -28,7 +28,7 @@ export const selectedDepartment = computed(() =>
 export const selectedDepartmentPrs = computed(() => {
   return staffMembers.value.find(
     (x) =>
-      x.filter === "PRS" &&
+      x.filter?.includes("PRS") &&
       x.departments?.some((d) => d.entry_uid === selectedDepartmentUid.value)
   );
 });
@@ -36,7 +36,7 @@ export const selectedDepartmentPrs = computed(() => {
 export const selectedDepartmentMrs = computed(() => {
   return staffMembers.value.find(
     (x) =>
-      x.filter === "MRS" &&
+      x.filter?.includes("MRS") &&
       x.departments?.some((d) => d.entry_uid === selectedDepartmentUid.value)
   );
 });

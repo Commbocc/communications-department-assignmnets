@@ -17,7 +17,7 @@ provide<boolean>("show-voip", props.showVoip);
 
 const filteredStaff = computed(() => {
   return props.filter
-    ? staffMembers.value.filter((x) => x.filter === props.filter)
+    ? staffMembers.value.filter((x) => x.filter.includes(props.filter))
     : staffMembers.value;
 });
 </script>

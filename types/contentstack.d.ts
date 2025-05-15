@@ -50,7 +50,7 @@ export type StaffFilter = "PRS" | "MRS" | "Manager" | string;
 export interface CommunicationsStaff extends Entry {
   departments?: RemoteEntryReference[];
   email?: string;
-  filter?: StaffFilter;
+  filter?: StaffFilter[];
   job_title?: string;
   mobile_phone?: string;
   office_phone?: string;
