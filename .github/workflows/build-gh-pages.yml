@@ -17,6 +17,10 @@ jobs:
       - name: Install and Build 🔧
         env:
           VITE_DATA_URL: ${{ vars.VITE_DATA_URL }}
+          VITE_CONTENTSTACK_MAIN_API_KEY: ${{ secrets.CONTENTSTACK_API_KEY }}
+          VITE_CONTENTSTACK_MAIN_ACCESS_TOKEN: ${{ secrets.CONTENTSTACK_DELIVERY_TOKEN }}
+          VITE_CONTENTSTACK_DATA_API_KEY: ${{ secrets.VITE_CONTENTSTACK_DATA_API_KEY }}
+          VITE_CONTENTSTACK_DATA_ACCESS_TOKEN: ${{ secrets.VITE_CONTENTSTACK_DATA_ACCESS_TOKEN }}
         run: |
           npm i
           npm run build
