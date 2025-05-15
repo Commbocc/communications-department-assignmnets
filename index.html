@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hillsborough County</title>
+    <link
+      rel="stylesheet"
+      href="https://commbocc.github.io/html-wrapper/static/css/app.css"
+    />
+  </head>
+  <body>
+    <section class="py-5">
+      <div class="container">
+        <hc-select-field
+          department-input-id="field59760408"
+          prs-email-input-id="field59760500"
+          mrs-email-input-id="field59760501"
+        ></hc-select-field>
+
+        <input id="field59760408" readonly disabled />
+        <input id="field59760500" readonly disabled />
+        <input id="field59760501" readonly disabled />
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="py-5">
+      <div class="container">
+        <hc-staff-table filter="MRS" show-voip></hc-staff-table>
+      </div>
+    </section>
+
+    <script src="./communications-department-assignmnets.umd.cjs"></script>
+  </body>
+</html>
