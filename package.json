@@ -1,22 +1,24 @@
 {
-  "name": "hc-vite-template",
-  "version": "0.0.0",
+  "name": "@hcflgov/communications-department-assignmnets",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "lint": "eslint --ext .js,.vue src"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "vue": "^3.0.5"
+    "@tailwindcss/vite": "^4.1.5",
+    "ofetch": "^1.4.1",
+    "tailwindcss": "^4.1.5",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.1",
-    "@vue/compiler-sfc": "^3.0.5",
-    "eslint": "^7.24.0",
-    "eslint-plugin-vue": "^7.9.0",
-    "sass": "^1.32.8",
-    "vite": "^2.1.5"
+    "@tailwindcss/typography": "^0.5.16",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.2",
+    "vue-tsc": "^2.2.8"
   }
 }
